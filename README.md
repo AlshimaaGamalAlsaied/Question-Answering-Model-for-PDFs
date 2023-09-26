@@ -38,7 +38,7 @@ The "bert-large-uncased-whole-word-masking-finetuned-squad" model:
 
 
 - Notes:
-<br>
+
 i. k: thousand, m: million, t: terajoules, b: billion.
 <br>
 ii. The empty spaces either result in a string or an illogical number when the model returns output.
