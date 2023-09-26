@@ -5,17 +5,17 @@ This project aims to develop an NLP model designed to extract information from v
 
 ## Methodology
 
-We have a set of questions for which we need numeric answers. It's important to note that these answers can be found within the text or within unstructured tables, making the task challenging. 
+We have a set of questions for which we need numeric answers. These answers can be found within the text or within unstructured tables, making the task challenging. 
 
 In the quest for numeric answers within tables, I explored several approaches:
 
-1. **Regular Expressions**: Initially, we attempted to use regular expressions to extract answers ```numeric_answer = re.search(r'\d{1,3}(?:,\d{3})*(?:\.\d+)?', answer["answer"])```. However, this approach did not yield satisfactory results due to the variability in how the context was written in different PDF files.
+1. **Regular Expressions**: Initially, I attempted to use regular expressions to extract answers ```numeric_answer = re.search(r'\d{1,3}(?:,\d{3})*(?:\.\d+)?', answer["answer"])```. However, this approach did not yield satisfactory results due to the variability in how the context was written in different PDF files.
 
-2. **Large Language Models (LLMs)**: Recognizing the potential of LLMs to provide more accurate answers, we aimed to leverage larger models. Unfortunately, resource constraints, specifically memory limitations, prevented us from using these larger models effectively. As a result, we had to resort to smaller models, which provided moderate results. However, the primary challenge remained with answers embedded in tables.
+2. **Large Language Models (LLMs)**: Recognizing the potential of LLMs to provide more accurate answers, aiming to leverage larger models. Unfortunately, resource constraints, specifically memory limitations, preventing from using these larger models effectively. As a result, it is better to resort to smaller models, which provide moderate results. However, the primary challenge remained with answers embedded in tables.
 
-3. **Table Extraction**: To tackle answers located within tables, we explored the extraction of tables from PDF files using the Tabula library. While we applied preprocessing and cleaning techniques, we found that this approach did not yield accurate answers.
+3. **Table Extraction**: To tackle answers located within tables, I explored the extraction of tables from PDF files using the Tabula library. While applying preprocessing and cleaning techniques, it shows that this approach did not yield accurate answers.
 
-Given these challenges, we are now considering fine-tuning the model itself to improve the accuracy of answers within tables.
+Given these challenges, it is better to consider fine-tuning the model itself to improve the accuracy of answers within tables.
 
 
 ### Modeling
